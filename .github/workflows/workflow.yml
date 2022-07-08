@@ -1,0 +1,16 @@
+name: Test workflow
+on:
+  workflow_dispatch: {}
+
+jobs:
+  job:
+    runs-on: ubuntu-latest
+    services:
+      service:
+        image: busybox
+        options: echo OPTIONS
+
+    steps:
+      - name: Dummy
+        run: |
+          echo STEP
